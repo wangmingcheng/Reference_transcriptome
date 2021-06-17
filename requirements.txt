@@ -1,0 +1,19 @@
+python | pip install PyMuPDF                     | pdf2png converter
+
+R      | BiocManager::install("DESeq2")          | DEG analyse
+R      | install.packages("pheatmap")            | draw heatmap
+R      | install.packages("ggplot2")             | basic data visualisation
+R      | install.packages("RColorBrewer")        | color schemes for maps
+R      | BiocManager::install("clusterProfiler") | reference based go enrichment and kegg enrichment and visualization of functional enrichment result
+R      | install.packages("stringr")             | string manipulations(str_c,str_detect,str_count,et.)
+R      | BiocManager::install("AnnotationHub")   | access the annotationHub web service
+R      | BiocManager::install("BioMart")         | accessing ensembl annotation and ID conversion
+R      | BiocManager::install("enrichplot")      | visualization methods for interpreting functional enrichment results (ORA and GSEA)
+R      | BiocManager::install("pathview")        | kegg pathway based data integration and visualization
+R      | BiocManager::install("KEGGREST")        | interface to the Kyoto Encyclopedia of Genes and Genomes (KEGG) REST server
+R      | install.packages("png")                 | download kegg pathway and save as png format
+
+perl   | cpan Excel::Writer::XLSX                | generate xlsx format file
+perl   | cpan File::Basename                     | Parse file paths into directory, filename and suffix
+perl   | cpan FindBin                            | Locate directory of original perl script
+perl   | cpan Text::CSV                          | comma-separated values manipulator

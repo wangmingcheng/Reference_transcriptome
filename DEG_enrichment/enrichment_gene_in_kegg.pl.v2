@@ -1,0 +1,32 @@
+use strict;
+use warnings;
+use File::Basename qw(basename dirname);
+
+open I,"/data03/home/wangmingcheng/All_Plants.gene_info";
+my %f;
+while(<I>){
+    chomp;
+    next unless /^85681/;
+    my @info=split/\s+/,$_;
+    $f{$info[2]}=$info[1];
+}
+close I;
+my @DE_info=</data03/home/wangmingcheng/test/05.differential_expression_gene/*_DE.csv>;
+open CM,">enrichment.sh";
+my %h;
+for my $DE_info(@DE_info){
+	open IN,"$DE_info";
+	my $name=(split/\./,basename($DE_info))[0];
+	open O,">$name.csv.t";
+	print O "ID\,Symbol\,log2FoldChange\,padj\n";
+	while(<IN>){
+		chomp;
+		my @info=split/\,/,$_;
+        my $h{$info[0]}=""
+        for my $symbol (sort keys %f){
+            print O "$f{$symbol}\,$symbol\,$info[2]\,$info[-1]\n" if $symbol=~/$info[0]/
+        }
+    }
+    close IN;
+    print CM "Rscript enrichment.r $name.csv $name\n";
+}

@@ -1,0 +1,1 @@
+/data03/home/wangmingcheng/biosoft/stringtie/prepDE.py3 -i /data03/home/wangmingcheng/pipeline/ref_trans/pipeline_test/03.stringtie_assembly -g /data03/home/wangmingcheng/pipeline/ref_trans/pipeline_test/04.count_matrices/gene_count_matrix.csv -t /data03/home/wangmingcheng/pipeline/ref_trans/pipeline_test/04.count_matrices/transcript_count_matrix.csv -l 147
