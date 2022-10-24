@@ -4,3 +4,5 @@ perl Ref_trans_v1.3.pl sample_file.config
 featureCounts: https://subread.sourceforge.net/featureCounts.html<br>
 RSEM: https://github.com/deweylab/RSEM<br>
 salmon：https://github.com/COMBINE-lab/salmon<br>
+HTSeq: https://github.com/htseq/htseq/blob/master/doc/index.rst<br>
+
